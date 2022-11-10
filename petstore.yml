@@ -75,6 +75,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Pet'
+              examples:
+                Lassie example:
+                  value:
+                    id: 1234123
+                    name: Lassie
+                    tag: Good girl
         default:
           description: unexpected error
           content:
