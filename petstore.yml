@@ -87,6 +87,28 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+    put:
+      summary: Update a pet
+      operationId: put-pets-petId
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pet'
+      description: Updates the specific pet. Does not support partial updates.
+    parameters:
+      - schema:
+          type: integer
+          format: int64
+          example: 849812658
+          minimum: 1
+        name: petId
+        in: path
+        required: true
+        description: Unique ID of the pet.
 components:
   schemas:
     Pet:
